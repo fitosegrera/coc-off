@@ -106,4 +106,5 @@ while True:
         time.sleep(8)
 
     except KeyboardInterrupt:
+        GPIO.output(23, False)
         exit(0)
