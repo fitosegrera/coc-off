@@ -43,7 +43,7 @@ def run(agentName, useSound):
         text_file.write(agentName + ": " + result + "\n\n")
 
     if useSound:
-        audio.alert(12, 0.2, 900)
+        audio.alert(12, 0.2, 3000)
         for i in range(5):
             for i in string.split(result):
                 print i
@@ -92,7 +92,8 @@ def main():
     time.sleep(cycleLimit)
     print '\n'
     printMsg('RECEIVING DATA FROM AGENTS...')
-    time.sleep(10)
+    sinewave(3, 5000)
+    time.sleep(5)
     GPIO.output(23, False)
 
 
