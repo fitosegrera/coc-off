@@ -12,7 +12,7 @@ import random
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(23, GPIO.OUT)
-GPIO.output(16, False)
+GPIO.output(23, False)
 
 cycleLimit = 120
 (rows, columns) = os.popen('stty size', 'r').read().split()
@@ -93,7 +93,7 @@ def main():
     print '\n'
     printMsg('RECEIVING DATA FROM AGENTS...')
     time.sleep(10)
-    GPIO.output(16, False)
+    GPIO.output(23, False)
 
 
 while True:
