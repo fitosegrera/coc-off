@@ -88,13 +88,14 @@ def printMsg(msg):
 def main():
     global cycleLimit
     audio.sinewave(3, 5000)
+    time.sleep(4)
     printMsg('CHAOTIC CYCLE INITIATED...')
     GPIO.output(23, True)
     time.sleep(cycleLimit)
     print '\n'
     printMsg('RECEIVING DATA FROM AGENTS...')
     audio.sinewave(3, 5000)
-    time.sleep(2)
+    time.sleep(4)
     GPIO.output(23, False)
 
 
