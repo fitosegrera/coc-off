@@ -43,7 +43,7 @@ def run(agentName, useSound):
         text_file.write(agentName + ": " + result + "\n\n")
 
     if useSound:
-        audio.alert(12, 0.2, 3000)
+        audio.alert(12, 0.2, 6000)
         for i in range(10):
             for i in string.split(result):
                 print i
@@ -87,13 +87,14 @@ def printMsg(msg):
 
 def main():
     global cycleLimit
+    audio.sinewave(3, 5000)
     printMsg('CHAOTIC CYCLE INITIATED...')
     GPIO.output(23, True)
     time.sleep(cycleLimit)
     print '\n'
     printMsg('RECEIVING DATA FROM AGENTS...')
     audio.sinewave(3, 5000)
-    time.sleep(5)
+    time.sleep(2)
     GPIO.output(23, False)
 
 
