@@ -95,6 +95,7 @@ def main():
     print '\n'
     printMsg('RECEIVING DATA FROM AGENTS...')
     audio.sinewave(3, 5000)
+    printMsg('DATA RECEIVED! STARTING PROCESSING...')
     time.sleep(4)
     GPIO.output(23, False)
 
