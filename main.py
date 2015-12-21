@@ -44,7 +44,7 @@ def run(agentName, useSound):
 
     if useSound:
         audio.alert(12, 0.2, 3000)
-        for i in range(5):
+        for i in range(10):
             for i in string.split(result):
                 print i
                 rand = random.random() * (0.01 - 0.001) + 0.001
@@ -55,7 +55,7 @@ def run(agentName, useSound):
         for c in range(int(columns)):
             points += "."
 
-        for i in range(10):
+        for i in range(20):
             print points
             audio.generate(5, 2)
             time.sleep(0.01)    
@@ -92,7 +92,7 @@ def main():
     time.sleep(cycleLimit)
     print '\n'
     printMsg('RECEIVING DATA FROM AGENTS...')
-    sinewave(3, 5000)
+    audio.sinewave(3, 5000)
     time.sleep(5)
     GPIO.output(23, False)
 
